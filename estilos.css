@@ -1,0 +1,106 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body {
+    background: #182625;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#main_container{
+    width: 100%;
+    margin: 0px auto;
+    border: 1px solid #2F3D40;
+    background: #2F3D40;
+}
+
+header{
+    background: #182625;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    margin: px;
+    text-align:left;
+    color: #0CF25D;
+}
+nav{
+    background: #182625;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    margin: 0px;
+    text-align: left;
+}
+nav a{
+    color: whitesmoke;
+}
+
+#contenido{
+    background:  #2F3D40;
+    min-height: 500px;
+    width: cal(100%- 20px);
+    margin: 0px;
+    padding: 10px;
+}
+
+footer{
+    background-color:#2F3D40;
+    height: 40px;
+    line-height: 40px;
+    margin: 0px;
+    text-align: center;
+    color: white;
+}
+
+.article{
+    color: rgba(242, 231, 79, 1);
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-top: 0px;
+    border-bottom: 1px solid #eee;
+}
+
+table{
+    background-color: #0CF25D;
+}
+
+h3{
+    color: white;
+   
+}
+table th {
+    font-family: Verdana;
+    font-weight:lighter;
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    background-color: rgba(3, 165, 43, 1);  
+}
+table td {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:lighter;
+    font-size: 1em;
+    box-shadow: 0 2px 2px -2px rgba(3, 165, 43, 1);
+    height: 50px;
+    width: fit-content;
+    
+}
+
+
+
+/* Color Theme Swatches in Hex */
+.Morgan-Stanley-Primary-1-hex { color: #0D9CD9; }
+.Morgan-Stanley-Primary-2-hex { color: #015C94; }
+.Morgan-Stanley-Primary-3-hex { color: #94C5EB; }
+.Morgan-Stanley-Primary-4-hex { color: #C9E0F5; }
+.Morgan-Stanley-Primary-5-hex { color: #95A3AB; }
+
+
+
+
+
+
+
+
+

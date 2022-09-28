@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="MainDiv">
+    <header>
+        <h1>CSS Documentation</h1>
+        <section class="HtmlNavigator" id="NavSection2">
+            <nav class="mainNav">
+                <a href="index.html">Home</a>
+                <a href="ElementosHTML.html">Html</a>
+                <a href="CSS.html">CSS</a>
+                <a href="TextExample.html">Paragraph example</a>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <section class="TableSection">
+            <section id="ColorsSection">
+                <div class="searchDiv">
+                    <input type="text" id="ColorsInput"  placeholder="Buscar">
+                    <div class="focusSearchInput"></div>
+                </div>
+                
+                <table class="Maintable" id="ColorsTable">
+                    <thead>
+                        <caption>Colores en CSS</caption>
+                        <tr class="tableHeader">
+                            <th>Modelo</th>
+                            <th>Descripcion</th>
+                            <th>Sintaxis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb'>
+                            <td>RGB</td>
+                            <td>Se estabece un color en base a las intensidades de los colores primarios. Tambien se admite un parametro adicional que es la transparencia</td>
+                            <td>rgb(red,green,blue,opacity) e.j rgb(112,60,143,0.2) </td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color'>
+                            <td>Valor Hexadecimal</td>
+                            <td>Es un valor de 6 digitos donde el primero indica el valor del rojo, el segundo del verde y el ultimo del azul</td>
+                            <td>e.j #703c8f</td>
+                        </tr >
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl'>
+                            <td>HSL</td>
+                            <td>El modelo admite 3 parametros hue(<dfn>Tono</dfn>,[0-360]),saturation (<dfn>Saturacion</dfn>,[0-100]%) lightness(<dfn>luminosidad</dfn>,[0-100]%) en este modelo tambien es posible agregar el parametro opacidad</td>
+                            <td>HSL(278,41%,40%,0.2)</td>
+                        </tr>
+                    </tbody>
+                    </table>  
+                </section>
+            <section id="selectorsSection">
+                <div class="searchDiv">
+                    <input type="text" id="SelectorsInput"  placeholder="Buscar">
+                    <div class="focusSearchInput"></div>
+                </div>
+                <table class="Maintable" id="SelectorsTable">
+                    <thead>
+                        <caption>Selectores en CSS</caption>
+                        <tr class="tableHeader">
+                            <th>Selector</th>
+                            <th>Descripcion</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors'>
+                            <td>Selector Universal</td>
+                            <td>Se usa el * para seleccionar todos los elementos y aplicar el estilo</td>
+                            <td>*{color:red;}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors'>
+                            <td>Selector de tipo</td>
+                            <td>Se usa la etiqueta del elemento y se aplica el estilo a dicho elemento</td>
+                            <td>p{color:green;}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors'>
+                            <td>Selector de clase</td>
+                            <td>Se selecciona los elementos en base a su atributo class y se les aplica los elementos</td>
+                            <td>.clase1{color:blue;}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors'>
+                            <td>Selector de ID</td>
+                            <td>Se selecciona los elementos en base a su atributo id y se les aplica los elementos</td>
+                            <td>#ID1{color:blue;}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'>
+                            <td rowspan="6">Selector de atributos</td>
+                            <td>Se selecciona los elementos que tengan un atributo dado</td>
+                            <td>td[att]{color:red;}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'>
+                            <td id="whiteTextInTable">Se selecciona los elementos que el atributo seleccionado sea igual a un valor</td>
+                            <td id="whiteTextInTable">td[att=value]{color:red;}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'>
+                            <td id="whiteTextInTable">Se selecciona los elementos que el atributo seleccionado contenga un valor dado</td>
+                            <td id="whiteTextInTable">td[att ~=value]{color:red;}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'>
+                            <td id="whiteTextInTable">Se selecciona los elementos que el atributo seleccionado donde el primer dato del atributo sea el valor dado</td>
+                            <td id="whiteTextInTable">td[att ^=value]{color:red;}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'>
+                            <td id="whiteTextInTable">Se selecciona los elementos que el atributo seleccionado donde el ultimo dato del atributo sea el valor dado</td>
+                            <td id="whiteTextInTable">td[att $=value]{color:red;}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'>
+                            <td id="whiteTextInTable">Se selecciona los elementos que el atributo seleccionado donde alguno de los datos del atributo sea el valor dado</td>
+                            <td id="whiteTextInTable">td[att *=value]{color:red;}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes'>
+                            <td>Selector de pseudo clases</td>
+                            <td>Permite seleccionar elementos en base a su estado como ser posicion o interaccion</td>
+                            <td>button:hover{...};
+                                button:disabled{...};
+                            </td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements'>
+                            <td>Selector de pseudo elementos</td>
+                            <td>Permite seleccionar partes de un elemento para aplicar un estilo</td>
+                            <td>p::first-line{...}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors#selector_lists'>
+                            <td>Union de selectores</td>
+                            <td>Realiza varias selecciones a las que se les aplicara un solo estilo</td>
+                            <td>Sel1,Sel2{...}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator'>
+                            <td>Seleccion de elementos descendientes</td>
+                            <td>Se aplica el estilo a elementos descendientes de otros (no necesariamente hijos)</td>
+                            <td>Abuelo nieto{...}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator'>
+                            <td>Seleccion de elementos hijos</td>
+                            <td>Se aplica el estilo a elementos hijos de otros</td>
+                            <td>Padre>hijo{...}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator'>
+                            <td>Seleccion de elementos hermanos</td>
+                            <td>Se aplica el estilo a elementos que son hermanos</td>
+                            <td>hermano1~hermano2{...}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator'>
+                            <td>Seleccion de elementos hermanos adyacentes</td>
+                            <td>Se aplica el estilo a elementos que son hermanos y estan inmediatamente despues</td>
+                            <td>hermano1+hermano2{...}</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </section>
+                
+                <section id="UnitsSection" >
+                    <div class="searchDiv">
+                        <input type="text" id="UnitsInput"  placeholder="Buscar">
+                        <div class="focusSearchInput"></div>
+                    </div>
+                    <table class="Maintable" id="UnitsTable">
+                        <thead>
+                            <caption>Longitudes en CSS</caption>
+                            <tr class="tableHeader">
+                                <th>Unidad</th>
+                                <th>Nombre</th>
+                                <th>Tipo</th>
+                                <th>Equivalencia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#lengths'>
+                                <td>px</td>
+                                <td id="whiteTextInTable">Pixel</td>
+                                <td id="whiteTextInTable">Absoluto</td>
+                                <td id="whiteTextInTable">0.265 mm</td>
+                            </tr>
+                            <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#lengths'>
+                                <td>rem</td>
+                                <td id="whiteTextInTable">Varia en base al tamaño de la letra</td>
+                                <td id="whiteTextInTable">Relativo</td>
+                                <td id="whiteTextInTable">Variable</td>
+                            </tr>
+                            <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#lengths'>
+                                <td>%</td>
+                                <td id="whiteTextInTable">Relativo al font size o width del elemento padre</td>
+                                <td id="whiteTextInTable">Relativo</td>
+                                <td id="whiteTextInTable">Variable</td>
+                            </tr>
+                            <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#lengths'>
+                                <td>vw</td>
+                                <td id="whiteTextInTable">Viewport width, varia en base al ancho de la pantalla</td>
+                                <td id="whiteTextInTable">Relativo</td>
+                                <td id="whiteTextInTable">Variable</td>
+                            </tr>
+                            <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#lengths'>
+                                <td>vh</td>
+                                <td id="whiteTextInTable">Viewport height, varia en base al alto de la pantalla</td>
+                                <td id="whiteTextInTable">Relativo</td>
+                                <td id="whiteTextInTable">Variable</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </section>
+                <section id="displaySection" >
+                    <div class="searchDiv">
+                        <input type="text" id="displaySectInput"  placeholder="Buscar">
+                        <div class="focusSearchInput"></div>
+                    </div>
+                    <table class="Maintable" id="displayTable">
+                        <thead>
+                            <caption>Propiedades de display</caption>
+                            <tr class="tableHeader">
+                                <th>Propiedad</th>
+                                <th>Block</th>
+                                <th>Inline</th>
+                                <th>Inline-Block</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr >
+                                <td>Ocupan todo el espacio</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">No</td>
+                                <td id="whiteTextInTable">No</td>
+                            </tr>
+                            <tr>
+                                <td>Nueva Linea</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">No</td>
+                                <td id="whiteTextInTable">No</td>
+                            </tr><tr >
+                                <td>Padding Horizontal</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">Si</td>
+                            </tr>
+                            <tr >
+                                <td>Padding Vertical</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">No</td>
+                                <td id="whiteTextInTable">Si</td>
+                            </tr>
+                            <tr >
+                                <td>Margin Horizontal</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">Si</td>
+                            </tr>
+                            <tr >
+                                <td>Margin Vertical</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">No</td>
+                                <td id="whiteTextInTable">Si</td>
+                            </tr>
+                            <tr  >
+                                <td>Border Horizontal</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">Si</td>
+                            </tr>
+                            <tr >
+                                <td>Border Vertical</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">No</td>
+                                <td id="whiteTextInTable">Si</td>
+                            </tr>
+                            <tr>
+                                <td>Respeta Width</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">No</td>
+                                <td id="whiteTextInTable">Si</td>
+                            </tr>
+                            <tr  >
+                                <td>Respeta Height</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">No</td>
+                                <td id="whiteTextInTable">Si</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </section>
+                </section>
+                
+                <section id="FlexboxExampleSection">
+                    <h1>Ejemplo del funcionamiento de flexbox</h1>
+                    <div id="ObjectsContainerFlexExample">
+                        <div id="Obj1" style="background-color: red;">Objeto 1</div>
+                        <div id="Obj2" style="background-color: black;">Objeto 2</div>
+                        <div id="Obj3" style="background-color: orange;">Objeto 3</div>
+                        <div id="Obj4" style="background-color: rgb(240, 162, 16);">Objeto 4</div>
+                        <div id="Obj5" style="background-color: rgb(225, 0, 255);">Objeto 5</div>
+                        <div id="Obj6" style="background-color: rgb(243, 16, 91);">Objeto 6</div>
+                    </div>
+                    <div id="CodeContainer">
+                        <textarea id="flexCssCode"name="textarea" >
+                            
+                        </textarea>
+                    </div>
+
+                </section>
+                
+                <section id="OverlaysSection">
+                    <div class="overlay" id="specificityOverlay">
+                        <div>
+                            <div id="buttonContainerOverlay">
+                                <button class="CloseOverlayButton">Close</button>
+                            </div>
+                            <h1>Especificidad</h1>
+                            <div class="textDiv">
+                                <p>La Especificidad es lo que permite determinar que estilo se va aplicar a un elemento, ya que pueden haber varios selectores para un mismo elemento.</p>
+                                <p>La regla consiste en que hay tres niveles para determinar el que gana la especificidad, el id, la clase y el elemento</p>
+                                <p>Si un primer selector tiene mas especificidad en el campo de id da igual que el segundo tenga mas especifidad en los otros dos campos, el primero ya gano la especificidad</p>
+                           </div>
+                            <div class="imageContainer">
+                            <img src="./Assets/Especificidad.PNG" alt="SpecificityExample">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overlay" id="LineStyleOverlay">
+                        <div>
+                            <div id="buttonContainerOverlay">
+                                <button class="CloseOverlayButton">Close</button>
+                            </div>
+                            <h1>Estilos en linea</h1>
+                            <div class="textDiv">
+                                <p>Los estilos en linea son declaraciones css usando el atributo style de un elemento HTML, este tiene prioridad sobre todas las otras declaraciones y no toma en cuenta la especifidad</p>
+                            </div>
+                            <div class="imageContainer">
+                            <img src="./Assets/EstilosLinea.png" alt="SpecificityExample">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overlay" id="TopicImportantOverlay">
+                        <div>
+                            <div id="buttonContainerOverlay">
+                                <button class="CloseOverlayButton">Close</button>
+                            </div>
+                            <h1>!Important</h1>
+                            <div class="textDiv">
+                                <p>El uso de !important sirve para darle prioridad a ciertas declaraciones de CSS, estas van por encima de los estilos aplicados usando el atributo style</p>
+                            </div>
+                            <div class="imageContainer">
+                            <img src="./Assets/ImportantImg.png" alt="SpecificityExample">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overlay" id="OrderOverlay">
+                        <div>
+                            <div id="buttonContainerOverlay">
+                                <button class="CloseOverlayButton">Close</button>
+                            </div>
+                            <h1>Orden</h1>
+                            <div class="textDiv">
+                                <p>Cuando tenemos varios selectores que tienen la misma espeficidad el selector que este al ultimo sera el que tenga la prioridad</p>
+                            </div>
+                            <div class="imageContainer">
+                            <img src="./Assets/Orden.PNG" alt="SpecificityExample">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overlay" id="InheritanceOverlay">
+                        <div>
+                            <div id="buttonContainerOverlay">
+                                <button class="CloseOverlayButton">Close</button>
+                            </div>
+                            <h1>Herencia</h1>
+                            <div class="textDiv">
+                                <p>Algunos de los elementos CSS heredan las propiedades de sus padres pero otros no, entonces para indicar que una propiedad se debe heredar del padre se usa la sentencia "inherit"</p>
+                                <p>Si se quisiera romper la herencia se usa la sentencia "initial"</p>
+                            </div>
+                            <div class="imageContainer">
+                            <img src="./Assets/css-inheritance.jpg" alt="SpecificityExample">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overlay" id="modeloDeCajas">
+                        <div>
+                            <div id="buttonContainerOverlay">
+                                <button class="CloseOverlayButton">Close</button>
+                            </div>
+                            <h1>Modelo de Cajas</h1>
+                            <div class="textDiv">
+                               <p>Cada elemento es considerado como una caja y se compone por</p>
+                               <dl>
+                                    <dt>*Contenido</dt>
+                                    <dd>Es el area donde se encuentra el texto, imagen etc, este es afectado por:</dd>
+                                    <dd>width</dd>
+                                    <dd>min-width</dd>
+                                    <dd>max-width</dd>
+                                    <dd>height</dd>
+                                    <dd>min-height</dd>
+                                    <dd>max-height</dd>
+
+                                    <dt>*Relleno</dt>
+                                    <dd>Es el area de relleno del elemento, este es afectado por:</dd>
+                                    <dd>padding</dd>
+                                    <dd>padding-top</dd>
+                                    <dd>padding-right</dd>
+                                    <dd>padding-bottom</dd>
+                                    <dd>padding-left</dd>
+
+                                    <dt>*Borde</dt>
+                                    <dd>Es el borde del elemento, puede tener un grosor y color que estan determinados por:</dd>
+                                    <dd>border</dd>
+                                    <dd>border-width</dd>
+                                    <dd>border-style</dd>
+                                    <dd>border-color</dd>
+
+                                    <dt>*Margen</dt>
+                                    <dd>Es el margen del elemento, es usado para separar al elemento de sus vecinos:</dd>
+                                    <dd>margin</dd>
+                                    <dd>margin-top</dd>
+                                    <dd>margin-right</dd>
+                                    <dd>margin-bottom</dd>
+                                    <dd>margin-left</dd>
+                               </dl>
+                            </div>
+                            <div class="imageContainer">
+                            <img src="./Assets/ModeloDeCajas.PNG" alt="SpecificityExample">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overlay" id="MarginCollapseOverlay">
+                        <div>
+                            <div id="buttonContainerOverlay">
+                                <button class="CloseOverlayButton">Close</button>
+                            </div>
+                            <h1>Colapsamiento de margenes verticales</h1>
+                            <div class="textDiv">
+                                <p>Los margenes verticales en HTML se solapan hasta que uno choque con el borde o relleno del otro elemento, por tanto la distancia entre estos sera igual a la del margen mas grande</p>
+                            </div>
+                            <div class="imageContainer">
+                            <img src="./Assets/SolapamientoDeMargenes.PNG" alt="SpecificityExample">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overlay" id="FlexBoxBasicOverlay">
+                        <div>
+                            <div id="buttonContainerOverlay">
+                                <button class="CloseOverlayButton">Close</button>
+                            </div>
+                            <h1>FlexBox</h1>
+                            <div class="textDiv">
+                                <p>La propiedad display flex permite establecer contenedores flexibles los cuales agrupan los componentes a lo largo de un eje principal y las lineas o ejes transversales agrupan las lineas flexibles</p>
+                                </div>
+                            <div class="imageContainer">
+                            <img src="./Assets/FlexboxEjes.PNG" alt="SpecificityExample">
+                            </div>
+                            <br>
+                            <div class="textDiv">
+                                <h2>Tamaños</h2>
+                                <p>Otra caracteristica de flexbox es que su tamaño principal es en base a su ancho si es rows y alto si son columns, de manera similar si el tamaño principal es el alto, el tamaño transversal sera el ancho</p>
+                            </div>
+                            <div class="textDiv">
+                                <h2>Ejes principales</h2>
+                                <p>Es posible escoger el eje principal usando la propiedad flex-direction, las opciones son</p>
+                                <ul>
+                                    <li>rows</li>
+                                    <li>rows-reverse</li>
+                                    <li>columns</li>
+                                    <li>columns-reverse</li>
+                                </ul>
+                            </div>
+                            <div class="imageContainer">
+                                <img src="./Assets/flexDirections.PNG" alt="SpecificityExample">
+                            </div>
+                            <div class="textDiv">
+                                <h2>Colocar elementos en el eje principal</h2>
+                                <p>Se puede establecer como se distribuyen los elementos en el eje principal usando la propiedad justify-content, esta puede recibir:</p>
+                                <ul>
+                                    <li>flex-start</li>
+                                    <li>flex-end</li>
+                                    <li>space-between</li>
+                                    <li>center</li>
+                                    <li>space-around</li>
+                                </ul>
+                            </div>
+                            <div class="textDiv">
+                                <h2>Colocar elementos en el eje transversal</h2>
+                                <p>Se puede establecer como se distribuyen los elementos en el eje transversal usando la propiedad align-items, esta puede recibir:</p>
+                                <ul>
+                                    <li>flex-start</li>
+                                    <li>flex-end</li>
+                                    <li>stretch</li>
+                                    <li>center</li>
+                                </ul>
+                            </div>
+                            <div class="textDiv">
+                                <h2>Flex-wrap</h2>
+                                <p>La propiedad flex-wrap se encarga de definir si el contenedor tiene una o varias lineas flexibles y ademas determina la direccion de estas, esta propiedad recibe</p>
+                                <ul>
+                                    <li>nowrap</li>
+                                    <li>wrap</li>
+                                    <li>wrap-reverse</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <div id="theoricSection">
+                    <h1>Aspectos teoricos</h1>
+                    <div>
+                        <button class="TheoricButton" OverlayId="specificityOverlay">Especifidad</button>
+                        <button class="TheoricButton" OverlayId="LineStyleOverlay">Estilos en linea</button>
+                        <button class="TheoricButton" OverlayId="TopicImportantOverlay">!important</button>
+                        <button class="TheoricButton" OverlayId="OrderOverlay">Orden</button>
+                        <button class="TheoricButton" OverlayId="InheritanceOverlay">Herencia</button>
+                        <button class="TheoricButton" OverlayId="modeloDeCajas">Modelo de cajas</button>
+                        <button class="TheoricButton" OverlayId="MarginCollapseOverlay">Colapso de margenes</button>
+                        <button class="TheoricButton" OverlayId="FlexBoxBasicOverlay">Conceptos basicos de flexbox</button>
+
+                    </div>
+                </div>
+        </main>
+        <footer>
+            <h3>Nombre: Christian Rivero Arnez</h3>
+        </footer>
+    </div>
+    <script type="module" src="./Src/Csspresenter.js"></script>
+</body>
+</html>
