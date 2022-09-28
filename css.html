@@ -4,9 +4,285 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS</title>
+    <title>Css</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <p>aca estara el css</p>
+
+    <div id="main_container"> 
+
+        <header>
+            <h2>CSS</h2>
+        </header>   
+
+         <nav class="menu de navegacion">
+            <a href="index.html">Inicio</a>
+            <a href="htmlElements.html">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="flexbox.html">Flexbox</a>
+        </nav>
+
+        <section id="contenido">
+            <article class="article">
+                <h3>Cascading Style Sheets</h3>
+                <p>
+                    El código CSS hace la vida más fácil al desarrollador front-end al separar las estructura de un documento HTML de su presentación. Dicho de otro modo el HTML actuaría como es esqueleto de la web, definiendo su estructura básica, y el CSS añadiría toda la capa de personalización sobre el que la web define su aspecto final.
+
+                    Siguiendo este fundamento resulta muy fácil para un diseñador web realizar cambios en la apariencia de una web sin afectar de manera dramática a su contenido. El contenido siempre será el mismo, solo cambia como aquello que podemos ver. CSS es fácil de entender y aprender, y nos da un potente control de cómo diseñar los documentos HTML.
+                </p>
+                
+            </article>
+            
+            <table id="tablaColors">
+                <thead>
+                    <h3>Colores en Css</h3>
+                    <tr class="CabezeraTabla">
+                        <th>Modelo</th>
+                        <th>Descripcion</th>
+                        <th>sintaxis</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb'>
+                        <td>RGB</td>
+                        <td>Se estabece un color en base a las intensidades de los colores primarios. Tambien se admite un parametro adicional que es la transparencia</td>
+                        <td>rgb(red,green,blue,opacity) e.j rgb(112,60,143,0.2) </td>
+                    </tr>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color'>
+                        <td>Valor Hexadecimal</td>
+                        <td>Es un valor de 6 digitos donde el primero indica el valor del rojo, el segundo del verde y el ultimo del azul</td>
+                        <td>e.j #703c8f</td>
+                    </tr >
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl'>
+                        <td>HSL</td>
+                        <td>El modelo admite 3 parametros hue(<dfn>Tono</dfn>,[0-360]),saturation (<dfn>Saturacion</dfn>,[0-100]%) lightness(<dfn>luminosidad</dfn>,[0-100]%) en este modelo tambien es posible agregar el parametro opacidad</td>
+                        <td>HSL(278,41%,40%,0.2)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <HR></HR>
+
+            <table id="tablaSelectores">
+                <thead>
+                    <h3>Selectores en Css</h3>
+                    <tr class="CabezeraTabla">
+                        <th>Modelo</th>
+                        <th>Descripcion</th>
+                        <th>sintaxis</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors'>
+                        <td>Selector Universal</td>
+                        <td>Se usa el * para seleccionar todos los elementos y aplicar el estilo</td>
+                        <td>*{color:red;}</td>
+                    </tr>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors'>
+                        <td>Selector de tipo</td>
+                        <td>Se usa la etiqueta del elemento y se aplica el estilo a dicho elemento</td>
+                        <td>p{color:green;}</td>
+                    </tr>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors'>
+                        <td>Selector de clase</td>
+                        <td>Se selecciona los elementos en base a su atributo class y se les aplica los elementos</td>
+                        <td>.clase1{color:blue;}</td>
+                    </tr>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors'>
+                        <td>Selector de ID</td>
+                        <td>Se selecciona los elementos en base a su atributo id y se les aplica los elementos</td>
+                        <td>#ID1{color:blue;}</td>
+                    </tr>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'>
+                        <td rowspan="6">Selector de atributos</td>
+                        <td>Se selecciona los elementos que tengan un atributo dado</td>
+                        <td>td[att]{color:red;}</td>
+                    </tr>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'>
+                        <td id="whiteTextInTable">Se selecciona los elementos que el atributo seleccionado sea igual a un valor</td>
+                        <td id="whiteTextInTable">td[att=value]{color:red;}</td>
+                    </tr>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'>
+                        <td id="whiteTextInTable">Se selecciona los elementos que el atributo seleccionado contenga un valor dado</td>
+                        <td id="whiteTextInTable">td[att ~=value]{color:red;}</td>
+                    </tr>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'>
+                        <td id="whiteTextInTable">Se selecciona los elementos que el atributo seleccionado donde el primer dato del atributo sea el valor dado</td>
+                        <td id="whiteTextInTable">td[att ^=value]{color:red;}</td>
+                    </tr>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'>
+                        <td id="whiteTextInTable">Se selecciona los elementos que el atributo seleccionado donde el ultimo dato del atributo sea el valor dado</td>
+                        <td id="whiteTextInTable">td[att $=value]{color:red;}</td>
+                    </tr>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'>
+                        <td id="whiteTextInTable">Se selecciona los elementos que el atributo seleccionado donde alguno de los datos del atributo sea el valor dado</td>
+                        <td id="whiteTextInTable">td[att *=value]{color:red;}</td>
+                    </tr>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes'>
+                        <td>Selector de pseudo clases</td>
+                        <td>Permite seleccionar elementos en base a su estado como ser posicion o interaccion</td>
+                        <td>button:hover{...};
+                            button:disabled{...};
+                        </td>
+                    </tr>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements'>
+                        <td>Selector de pseudo elementos</td>
+                        <td>Permite seleccionar partes de un elemento para aplicar un estilo</td>
+                        <td>p::first-line{...}</td>
+                    </tr>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors#selector_lists'>
+                        <td>Union de selectores</td>
+                        <td>Realiza varias selecciones a las que se les aplicara un solo estilo</td>
+                        <td>Sel1,Sel2{...}</td>
+                    </tr>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator'>
+                        <td>Seleccion de elementos descendientes</td>
+                        <td>Se aplica el estilo a elementos descendientes de otros (no necesariamente hijos)</td>
+                        <td>Abuelo nieto{...}</td>
+                    </tr>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator'>
+                        <td>Seleccion de elementos hijos</td>
+                        <td>Se aplica el estilo a elementos hijos de otros</td>
+                        <td>Padre>hijo{...}</td>
+                    </tr>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator'>
+                        <td>Seleccion de elementos hermanos</td>
+                        <td>Se aplica el estilo a elementos que son hermanos</td>
+                        <td>hermano1~hermano2{...}</td>
+                    </tr>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator'>
+                        <td>Seleccion de elementos hermanos adyacentes</td>
+                        <td>Se aplica el estilo a elementos que son hermanos y estan inmediatamente despues</td>
+                        <td>hermano1+hermano2{...}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <HR></HR>
+
+            <table id="tablalongitudes">
+                <thead>
+                    <h3>Longitudes en Css</h3>
+                    <tr class="CabezeraTabla">
+                        <th>Unidad</th>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>Equivalencia</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#lengths'>
+                        <td>px</td>
+                        <td id="whiteTextInTable">Pixel</td>
+                        <td id="whiteTextInTable">Absoluto</td>
+                        <td id="whiteTextInTable">0.265 mm</td>
+                    </tr>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#lengths'>
+                        <td>rem</td>
+                        <td id="whiteTextInTable">Varia en base al tamaño de la letra</td>
+                        <td id="whiteTextInTable">Relativo</td>
+                        <td id="whiteTextInTable">Variable</td>
+                    </tr>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#lengths'>
+                        <td>%</td>
+                        <td id="whiteTextInTable">Relativo al font size o width del elemento padre</td>
+                        <td id="whiteTextInTable">Relativo</td>
+                        <td id="whiteTextInTable">Variable</td>
+                    </tr>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#lengths'>
+                        <td>vw</td>
+                        <td id="whiteTextInTable">Viewport width, varia en base al ancho de la pantalla</td>
+                        <td id="whiteTextInTable">Relativo</td>
+                        <td id="whiteTextInTable">Variable</td>
+                    </tr>
+                    <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#lengths'>
+                        <td>vh</td>
+                        <td id="whiteTextInTable">Viewport height, varia en base al alto de la pantalla</td>
+                        <td id="whiteTextInTable">Relativo</td>
+                        <td id="whiteTextInTable">Variable</td>
+                    </tr>
+                </tbody>
+                <HR></HR>
+                <table id="tablaPropiedades">
+                    <thead>
+                        <h3>Propiedades de Display</h3>
+                        <tr class="CabezeraTabla">
+                            <th>Propiedad</th>
+                            <th>Block</th>
+                            <th>Inline</th>
+                            <th>Inline-Block</th>
+                        </tr>
+                    </thead>
+    
+                    <tbody>
+                        <tr >
+                            <td>Ocupan todo el espacio</td>
+                            <td id="whiteTextInTable">Si</td>
+                            <td id="whiteTextInTable">No</td>
+                            <td id="whiteTextInTable">No</td>
+                        </tr>
+                        <tr>
+                            <td>Nueva Linea</td>
+                            <td id="whiteTextInTable">Si</td>
+                            <td id="whiteTextInTable">No</td>
+                            <td id="whiteTextInTable">No</td>
+                        </tr><tr >
+                            <td>Padding Horizontal</td>
+                            <td id="whiteTextInTable">Si</td>
+                            <td id="whiteTextInTable">Si</td>
+                            <td id="whiteTextInTable">Si</td>
+                        </tr>
+                        <tr >
+                            <td>Padding Vertical</td>
+                            <td id="whiteTextInTable">Si</td>
+                            <td id="whiteTextInTable">No</td>
+                            <td id="whiteTextInTable">Si</td>
+                        </tr>
+                        <tr >
+                            <td>Margin Horizontal</td>
+                            <td id="whiteTextInTable">Si</td>
+                            <td id="whiteTextInTable">Si</td>
+                            <td id="whiteTextInTable">Si</td>
+                        </tr>
+                        <tr >
+                            <td>Margin Vertical</td>
+                            <td id="whiteTextInTable">Si</td>
+                            <td id="whiteTextInTable">No</td>
+                            <td id="whiteTextInTable">Si</td>
+                        </tr>
+                        <tr  >
+                            <td>Border Horizontal</td>
+                            <td id="whiteTextInTable">Si</td>
+                            <td id="whiteTextInTable">Si</td>
+                            <td id="whiteTextInTable">Si</td>
+                        </tr>
+                        <tr >
+                            <td>Border Vertical</td>
+                            <td id="whiteTextInTable">Si</td>
+                            <td id="whiteTextInTable">No</td>
+                            <td id="whiteTextInTable">Si</td>
+                        </tr>
+                        <tr>
+                            <td>Respeta Width</td>
+                            <td id="whiteTextInTable">Si</td>
+                            <td id="whiteTextInTable">No</td>
+                            <td id="whiteTextInTable">Si</td>
+                        </tr>
+                        <tr  >
+                            <td>Respeta Height</td>
+                            <td id="whiteTextInTable">Si</td>
+                            <td id="whiteTextInTable">No</td>
+                            <td id="whiteTextInTable">Si</td>
+                        </tr>
+                    </tbody>
+                    
+        </section>
+        <HR></HR>
+
+    </div>
+
+
 </body>
-</html>
+</html>     
